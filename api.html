@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://echarts.baidu.com/api.html#echarts -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" user-scalable="no">
+    <link rel="shortcut icon" href="http://echarts.baidu.com/images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="./ECharts Documentationapi_files/bootstrap.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries-->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="./ECharts Documentationapi_files/main.css">
+    <style>@font-face {font-family:"noto-thin";src:local("Microsoft Yahei");}@font-face {font-family:"noto-light";src:local("Microsoft Yahei");}</style>
+    <script src="./ECharts Documentationapi_files/hm.js"></script>
+    <script id="font-hack" type="text/javascript">if (/windows/i.test(navigator.userAgent)) {
+    var el = document.createElement('style');
+    el.innerHTML = ''
+        + '@font-face {font-family:"noto-thin";src:local("Microsoft Yahei");}'
+        + '@font-face {font-family:"noto-light";src:local("Microsoft Yahei");}';
+    document.head.insertBefore(el, document.getElementById('font-hack'));
+}
+</script>
+    <style type="text/css">div[id="bdyx_float_rb"]{display:none !important;}</style>
+    <title>ECharts Documentation</title>
+    <link rel="stylesheet" type="text/css" href="./ECharts Documentationapi_files/ecOption.css">
+    <link rel="stylesheet" type="text/css" href="./ECharts Documentationapi_files/prettify.css">
+    <link rel="stylesheet" type="text/css" href="./ECharts Documentationapi_files/perfect-scrollbar.min.css">
+    <script src="./ECharts Documentationapi_files/log.js"></script>
+    <script src="./ECharts Documentationapi_files/prettify.js"></script>
+    <script src="./ECharts Documentationapi_files/lang-css.js"></script>
+    <script src="./ECharts Documentationapi_files/esl.js"></script>
+    <script data-require-id="docTool/main" src="./ECharts Documentationapi_files/main.js" async=""></script>
+    <style type="text/css">#gj_mini{background-image:url(http://s.pc.qq.com/navigate/adc/v2/hover-ok.png);background-repeat:no-repeat;display:block;width:58px;height:58px;background-position:0 0}#gj_shard{background-image:url(http://s.pc.qq.com/navigate/adc/v2/suipian.png);background-repeat:no-repeat;display:none;width:200px;height:200px;background-position:0 0}#gj_circle{background-image:url(http://s.pc.qq.com/navigate/adc/v2/guangquan.png);background-repeat:no-repeat;display:none;width:58px;height:58px;background-position:0 0}#gj_bar_left{background: url(http://s.pc.qq.com/navigate/adc/v2/zuo.png) no-repeat; height:42px; width :0px; font-family: "Microsoft YaHei" ! important;overflow:hidden; display:block;}#gj_bar_left #tipstext{line-height:normal;padding-left: 20px;padding-top: 3px;font-size: 12px;padding-right: 10px;color: #fff;overflow:hidden;}#gj_bar_left span{font-size: 14px;font-weight: bold;overflow:hidden;}</style>
+</head>
+    <!--[if lte IE 8]>
+<body class="lower-ie">
+    <![endif]-->
+    <!--[if (gt IE 8)|!(IE)]>
+<body class="undefined"></body>
+    <![endif]-->
+<body>
+    <div id="lowie-main">
+        <img src="./ECharts Documentationapi_files/forie.png" alt="ie tip"></div>
+    <div id="main">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="http://echarts.baidu.com/index.html" class="navbar-brand">
+                        <img src="./ECharts Documentationapi_files/logo.png" alt="echarts logo" class="navbar-logo"></a>
+                </div>
+                <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li id="nav-index">
+                            <a href="http://echarts.baidu.com/index.html">首页</a>
+                        </li>
+                        <li id="nav-doc" class="active">
+                            <a href="http://echarts.baidu.com/api.html#" data-toggle="dropdown" class="dropdown-toggle">
+                                文档 <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="http://echarts.baidu.com/tutorial.html">教程</a>
+                                </li>
+                                <li>
+                                    <a href="http://echarts.baidu.com/api.html">API</a>
+                                </li>
+                                <li>
+                                    <a href="http://echarts.baidu.com/option.html">配置项手册</a>
+                                </li>
+                                <li>
+                                    <a href="http://echarts.baidu.com/changelog.html">Changelog</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="nav-examples">
+                            <a href="http://echarts.baidu.com/examples.html">实例</a>
+                        </li>
+                        <li id="nav-download" class="dropdown">
+                            <a href="http://echarts.baidu.com/api.html#" data-toggle="dropdown" class="dropdown-toggle">
+                                下载 <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="http://echarts.baidu.com/download.html">下载</a>
+                                </li>
+                                <li>
+                                    <a href="http://echarts.baidu.com/builder.html">在线构建</a>
+                                </li>
+                                <li>
+                                    <a href="http://echarts.baidu.com/download-map.html">地图</a>
+                                </li>
+                                <li>
+                                    <a href="http://echarts.baidu.com/download-theme.html">主题</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="nav-github">
+                            <a href="https://github.com/ecomfe/echarts" target="_blank">GitHub</a>
+                        </li>
+                        <li id="nav-2" class="0">
+                            <a href="http://echarts.baidu.com/echarts2/">2.0</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="ecdoc-apidoc dtui-cpt">
+            <div class="ecdoc-api-left-area">
+
+                <div class="ecdoc-api-query-box">
+                    <div data-cpt="
+            type: &#39;TextInput&#39;,
+            name: &#39;queryInput&#39;,
+            viewModel: {
+                mouseEnterSelect: true,
+                confirmPoint: {blur: false, pressEnter: true}
+            }" class="dtui-cpt dtui-txipt dtui-cpt-type-text dtui-txipt-type-text">
+                        <input type="text" placeholder="API名称搜索（快捷键&#39;/&#39;）">
+                        <span class="dtui-cpt-alert-mark dtui-txipt-alert-mark" style="display:none"></span>
+                        <span class="dtui-cpt-alert-text dtui-txipt-alert-text" style="display:none"></span>
+                    </div>
+                    <div data-cpt="
+            type: &#39;CheckButton&#39;,
+            name: &#39;queryMode&#39;,
+            viewModel: {
+                css: &#39;query-mode&#39;,
+                checked: lib.ob(&#39;fuzzyPath&#39;),
+                dataList: [
+                    {
+                        value: &#39;fuzzyPath&#39;,
+                        placeholder: lang.queryBoxPlaceholderFuzzyPath,
+                        text: lang.queryBoxTextFuzzyPath
+                    },
+                    {
+                        value: &#39;anyText&#39;,
+                        placeholder: lang.queryBoxPlaceholderAnyText,
+                        text: lang.queryBoxTextAnyText
+                    }
+                ]
+            }" class="dtui-cpt dtui-chkbtn query-mode">
+                        <span class="dtui-chkbtn-i dtui-chkbtn-i-active" data-value-index="0">API搜索</span>
+                        <span class="dtui-chkbtn-i" data-value-index="1">全文搜索</span>
+                    </div>
+                    <div data-cpt="
+            type: &#39;Button&#39;,
+            name: &#39;collapseAll&#39;,
+            text: lang.collapseAll,
+            css: &#39;collapse-all&#39;" class="dtui-cpt dtui-btn collapse-all">折叠</div>
+                    <span class="query-result-info"></span>
+                </div>
+
+                <div class="ecdoc-api-tree-area ps-container" data-ps-id="bb646061-e33c-cbe2-25a0-2e056e7f360d">
+                    <div class="ecdoc-api-tree dtui-cpt dtui-treelist" data-cpt="
+            type: &#39;TreeList&#39;,
+            name: &#39;apiDocTree&#39;,
+            viewModel: {
+                selected: viewModel.apiTreeSelected,
+                highlighted: viewModel.apiTreeHighlighted,
+                hovered: viewModel.apiTreeHovered,
+                datasource: viewModel.apiTreeDatasource,
+                resizeEvent: viewModel.apiTreeResize
+            }">
+                        <ul class="dtui-treelist-list" style="">
+                            <li class="dtui-treelist-i dtui-treelist-parent dtui-treelist-collapsed" data-item-path="0" data-item-level="0" data-item-encode-html="0"> <i class="dtui-treelist-thumb"></i>
+                                <span class="dtui-treelist-text dtui-treelist-text-active" data-item-path="0">
+                                    <span class="ecdoc-api-tree-text-prop">echarts</span>
+                                    : {...},
+                                </span>
+                                <ul class="dtui-treelist-list" style="display:none">
+                                    <li class="dtui-treelist-i " data-item-path="0,0" data-item-level="1" data-item-encode-html="0"> <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="0,0">
+                                            <span class="ecdoc-api-tree-text-prop">init</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">Function</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="0,1" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="0,1">
+                                            <span class="ecdoc-api-tree-text-prop">connect</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">Function</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="0,2" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="0,2">
+                                            <span class="ecdoc-api-tree-text-prop">disConnect</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">Function</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="0,3" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="0,3">
+                                            <span class="ecdoc-api-tree-text-prop">dispose</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">Function</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="0,4" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="0,4">
+                                            <span class="ecdoc-api-tree-text-prop">getInstanceByDom</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">Function</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="0,5" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="0,5">
+                                            <span class="ecdoc-api-tree-text-prop">registerMap</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">Function</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="0,6" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="0,6">
+                                            <span class="ecdoc-api-tree-text-prop">registerTheme</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">Function</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-post">},</li>
+                                </ul>
+                            </li>
+                            <li class="dtui-treelist-i dtui-treelist-parent dtui-treelist-collapsed" data-item-path="1" data-item-level="0" data-item-encode-html="0">
+                                <i class="dtui-treelist-thumb"></i>
+                                <span class="dtui-treelist-text" data-item-path="1">
+                                    <span class="ecdoc-api-tree-text-prop">echartsInstance</span>
+                                    : {...},
+                                </span>
+                                <ul class="dtui-treelist-list" style="display:none">
+                                    <li class="dtui-treelist-i " data-item-path="1,0" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="1,0">
+                                            <span class="ecdoc-api-tree-text-prop">group</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">...</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="1,1" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="1,1">
+                                            <span class="ecdoc-api-tree-text-prop">setOption</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">Function</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="1,2" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="1,2">
+                                            <span class="ecdoc-api-tree-text-prop">getWidth</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">Function</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="1,3" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="1,3">
+                                            <span class="ecdoc-api-tree-text-prop">getHeight</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">Function</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="1,4" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="1,4">
+                                            <span class="ecdoc-api-tree-text-prop">getDom</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">Function</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="1,5" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="1,5">
+                                            <span class="ecdoc-api-tree-text-prop">getOption</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">Function</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="1,6" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="1,6">
+                                            <span class="ecdoc-api-tree-text-prop">resize</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">Function</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="1,7" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="1,7">
+                                            <span class="ecdoc-api-tree-text-prop">dispatchAction</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">Function</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="1,8" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="1,8">
+                                            <span class="ecdoc-api-tree-text-prop">on</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">Function</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="1,9" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="1,9">
+                                            <span class="ecdoc-api-tree-text-prop">off</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">Function</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="1,10" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="1,10">
+                                            <span class="ecdoc-api-tree-text-prop">showLoading</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">Function</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="1,11" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="1,11">
+                                            <span class="ecdoc-api-tree-text-prop">hideLoading</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">Function</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="1,12" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="1,12">
+                                            <span class="ecdoc-api-tree-text-prop">getDataURL</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">Function</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="1,13" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="1,13">
+                                            <span class="ecdoc-api-tree-text-prop">getConnectedDataURL</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">...</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="1,14" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="1,14">
+                                            <span class="ecdoc-api-tree-text-prop">clear</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">...</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="1,15" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="1,15">
+                                            <span class="ecdoc-api-tree-text-prop">isDisposed</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">...</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="1,16" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="1,16">
+                                            <span class="ecdoc-api-tree-text-prop">dispose</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">...</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-post">},</li>
+                                </ul>
+                            </li>
+                            <li class="dtui-treelist-i dtui-treelist-parent dtui-treelist-collapsed" data-item-path="2" data-item-level="0" data-item-encode-html="0">
+                                <i class="dtui-treelist-thumb"></i>
+                                <span class="dtui-treelist-text" data-item-path="2">
+                                    <span class="ecdoc-api-tree-text-prop">action</span>
+                                    : {...},
+                                </span>
+                                <ul class="dtui-treelist-list" style="display:none">
+                                    <li class="dtui-treelist-i " data-item-path="2,0" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="2,0">
+                                            <span class="ecdoc-api-tree-text-prop">highlight</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">...</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="2,1" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="2,1">
+                                            <span class="ecdoc-api-tree-text-prop">downplay</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">...</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i dtui-treelist-parent dtui-treelist-collapsed" data-item-path="2,2" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="2,2">
+                                            <span class="ecdoc-api-tree-text-prop">legend</span>
+                                            : {...},
+                                        </span>
+                                        <ul class="dtui-treelist-list" style="display:none">
+                                            <li class="dtui-treelist-i " data-item-path="2,2,0" data-item-level="2" data-item-encode-html="0">
+                                                <i class="dtui-treelist-thumb"></i>
+                                                <span class="dtui-treelist-text" data-item-path="2,2,0">
+                                                    <span class="ecdoc-api-tree-text-prop">legendSelect</span>
+                                                    :
+                                                    <span class="ecdoc-api-tree-text-default">...</span>
+                                                    ,
+                                                </span>
+                                            </li>
+                                            <li class="dtui-treelist-i " data-item-path="2,2,1" data-item-level="2" data-item-encode-html="0">
+                                                <i class="dtui-treelist-thumb"></i>
+                                                <span class="dtui-treelist-text" data-item-path="2,2,1">
+                                                    <span class="ecdoc-api-tree-text-prop">legendUnSelect</span>
+                                                    :
+                                                    <span class="ecdoc-api-tree-text-default">...</span>
+                                                    ,
+                                                </span>
+                                            </li>
+                                            <li class="dtui-treelist-i " data-item-path="2,2,2" data-item-level="2" data-item-encode-html="0">
+                                                <i class="dtui-treelist-thumb"></i>
+                                                <span class="dtui-treelist-text" data-item-path="2,2,2">
+                                                    <span class="ecdoc-api-tree-text-prop">legendToggleSelect</span>
+                                                    :
+                                                    <span class="ecdoc-api-tree-text-default">...</span>
+                                                    ,
+                                                </span>
+                                            </li>
+                                            <li class="dtui-treelist-post">},</li>
+                                        </ul>
+                                    </li>
+                                    <li class="dtui-treelist-i dtui-treelist-parent dtui-treelist-collapsed" data-item-path="2,3" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="2,3">
+                                            <span class="ecdoc-api-tree-text-prop">tooltip</span>
+                                            : {...},
+                                        </span>
+                                        <ul class="dtui-treelist-list" style="display:none">
+                                            <li class="dtui-treelist-i " data-item-path="2,3,0" data-item-level="2" data-item-encode-html="0">
+                                                <i class="dtui-treelist-thumb"></i>
+                                                <span class="dtui-treelist-text" data-item-path="2,3,0">
+                                                    <span class="ecdoc-api-tree-text-prop">showTip</span>
+                                                    :
+                                                    <span class="ecdoc-api-tree-text-default">...</span>
+                                                    ,
+                                                </span>
+                                            </li>
+                                            <li class="dtui-treelist-i " data-item-path="2,3,1" data-item-level="2" data-item-encode-html="0">
+                                                <i class="dtui-treelist-thumb"></i>
+                                                <span class="dtui-treelist-text" data-item-path="2,3,1">
+                                                    <span class="ecdoc-api-tree-text-prop">hideTip</span>
+                                                    :
+                                                    <span class="ecdoc-api-tree-text-default">...</span>
+                                                    ,
+                                                </span>
+                                            </li>
+                                            <li class="dtui-treelist-post">},</li>
+                                        </ul>
+                                    </li>
+                                    <li class="dtui-treelist-i dtui-treelist-parent dtui-treelist-collapsed" data-item-path="2,4" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="2,4">
+                                            <span class="ecdoc-api-tree-text-prop">dataZoom</span>
+                                            : {...},
+                                        </span>
+                                        <ul class="dtui-treelist-list" style="display:none">
+                                            <li class="dtui-treelist-i " data-item-path="2,4,0" data-item-level="2" data-item-encode-html="0">
+                                                <i class="dtui-treelist-thumb"></i>
+                                                <span class="dtui-treelist-text" data-item-path="2,4,0">
+                                                    <span class="ecdoc-api-tree-text-prop">dataZoom</span>
+                                                    :
+                                                    <span class="ecdoc-api-tree-text-default">...</span>
+                                                    ,
+                                                </span>
+                                            </li>
+                                            <li class="dtui-treelist-post">},</li>
+                                        </ul>
+                                    </li>
+                                    <li class="dtui-treelist-i dtui-treelist-parent dtui-treelist-collapsed" data-item-path="2,5" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="2,5">
+                                            <span class="ecdoc-api-tree-text-prop">visualMap</span>
+                                            : {...},
+                                        </span>
+                                        <ul class="dtui-treelist-list" style="display:none">
+                                            <li class="dtui-treelist-i " data-item-path="2,5,0" data-item-level="2" data-item-encode-html="0">
+                                                <i class="dtui-treelist-thumb"></i>
+                                                <span class="dtui-treelist-text" data-item-path="2,5,0">
+                                                    <span class="ecdoc-api-tree-text-prop">selectDataRange</span>
+                                                    :
+                                                    <span class="ecdoc-api-tree-text-default">...</span>
+                                                    ,
+                                                </span>
+                                            </li>
+                                            <li class="dtui-treelist-post">},</li>
+                                        </ul>
+                                    </li>
+                                    <li class="dtui-treelist-i dtui-treelist-parent dtui-treelist-collapsed" data-item-path="2,6" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="2,6">
+                                            <span class="ecdoc-api-tree-text-prop">timeline</span>
+                                            : {...},
+                                        </span>
+                                        <ul class="dtui-treelist-list" style="display:none">
+                                            <li class="dtui-treelist-i " data-item-path="2,6,0" data-item-level="2" data-item-encode-html="0">
+                                                <i class="dtui-treelist-thumb"></i>
+                                                <span class="dtui-treelist-text" data-item-path="2,6,0">
+                                                    <span class="ecdoc-api-tree-text-prop">timelineChange</span>
+                                                    :
+                                                    <span class="ecdoc-api-tree-text-default">...</span>
+                                                    ,
+                                                </span>
+                                            </li>
+                                            <li class="dtui-treelist-i " data-item-path="2,6,1" data-item-level="2" data-item-encode-html="0">
+                                                <i class="dtui-treelist-thumb"></i>
+                                                <span class="dtui-treelist-text" data-item-path="2,6,1">
+                                                    <span class="ecdoc-api-tree-text-prop">timelinePlayChange</span>
+                                                    :
+                                                    <span class="ecdoc-api-tree-text-default">...</span>
+                                                    ,
+                                                </span>
+                                            </li>
+                                            <li class="dtui-treelist-post">},</li>
+                                        </ul>
+                                    </li>
+                                    <li class="dtui-treelist-i dtui-treelist-parent dtui-treelist-collapsed" data-item-path="2,7" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="2,7">
+                                            <span class="ecdoc-api-tree-text-prop">toolbox</span>
+                                            : {...},
+                                        </span>
+                                        <ul class="dtui-treelist-list" style="display:none">
+                                            <li class="dtui-treelist-i " data-item-path="2,7,0" data-item-level="2" data-item-encode-html="0">
+                                                <i class="dtui-treelist-thumb"></i>
+                                                <span class="dtui-treelist-text" data-item-path="2,7,0">
+                                                    <span class="ecdoc-api-tree-text-prop">restore</span>
+                                                    :
+                                                    <span class="ecdoc-api-tree-text-default">...</span>
+                                                    ,
+                                                </span>
+                                            </li>
+                                            <li class="dtui-treelist-post">},</li>
+                                        </ul>
+                                    </li>
+                                    <li class="dtui-treelist-i dtui-treelist-parent dtui-treelist-collapsed" data-item-path="2,8" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="2,8">
+                                            <span class="ecdoc-api-tree-text-prop">pie</span>
+                                            : {...},
+                                        </span>
+                                        <ul class="dtui-treelist-list" style="display:none">
+                                            <li class="dtui-treelist-i " data-item-path="2,8,0" data-item-level="2" data-item-encode-html="0">
+                                                <i class="dtui-treelist-thumb"></i>
+                                                <span class="dtui-treelist-text" data-item-path="2,8,0">
+                                                    <span class="ecdoc-api-tree-text-prop">pieSelect</span>
+                                                    :
+                                                    <span class="ecdoc-api-tree-text-default">...</span>
+                                                    ,
+                                                </span>
+                                            </li>
+                                            <li class="dtui-treelist-i " data-item-path="2,8,1" data-item-level="2" data-item-encode-html="0">
+                                                <i class="dtui-treelist-thumb"></i>
+                                                <span class="dtui-treelist-text" data-item-path="2,8,1">
+                                                    <span class="ecdoc-api-tree-text-prop">pieUnSelect</span>
+                                                    :
+                                                    <span class="ecdoc-api-tree-text-default">...</span>
+                                                    ,
+                                                </span>
+                                            </li>
+                                            <li class="dtui-treelist-i " data-item-path="2,8,2" data-item-level="2" data-item-encode-html="0">
+                                                <i class="dtui-treelist-thumb"></i>
+                                                <span class="dtui-treelist-text" data-item-path="2,8,2">
+                                                    <span class="ecdoc-api-tree-text-prop">pieToggleSelect</span>
+                                                    :
+                                                    <span class="ecdoc-api-tree-text-default">...</span>
+                                                    ,
+                                                </span>
+                                            </li>
+                                            <li class="dtui-treelist-post">},</li>
+                                        </ul>
+                                    </li>
+                                    <li class="dtui-treelist-i dtui-treelist-parent dtui-treelist-collapsed" data-item-path="2,9" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="2,9">
+                                            <span class="ecdoc-api-tree-text-prop">map</span>
+                                            : {...},
+                                        </span>
+                                        <ul class="dtui-treelist-list" style="display:none">
+                                            <li class="dtui-treelist-i " data-item-path="2,9,0" data-item-level="2" data-item-encode-html="0">
+                                                <i class="dtui-treelist-thumb"></i>
+                                                <span class="dtui-treelist-text" data-item-path="2,9,0">
+                                                    <span class="ecdoc-api-tree-text-prop">mapSelect</span>
+                                                    :
+                                                    <span class="ecdoc-api-tree-text-default">...</span>
+                                                    ,
+                                                </span>
+                                            </li>
+                                            <li class="dtui-treelist-i " data-item-path="2,9,1" data-item-level="2" data-item-encode-html="0">
+                                                <i class="dtui-treelist-thumb"></i>
+                                                <span class="dtui-treelist-text" data-item-path="2,9,1">
+                                                    <span class="ecdoc-api-tree-text-prop">mapUnSelect</span>
+                                                    :
+                                                    <span class="ecdoc-api-tree-text-default">...</span>
+                                                    ,
+                                                </span>
+                                            </li>
+                                            <li class="dtui-treelist-i " data-item-path="2,9,2" data-item-level="2" data-item-encode-html="0">
+                                                <i class="dtui-treelist-thumb"></i>
+                                                <span class="dtui-treelist-text" data-item-path="2,9,2">
+                                                    <span class="ecdoc-api-tree-text-prop">mapToggleSelect</span>
+                                                    :
+                                                    <span class="ecdoc-api-tree-text-default">...</span>
+                                                    ,
+                                                </span>
+                                            </li>
+                                            <li class="dtui-treelist-post">},</li>
+                                        </ul>
+                                    </li>
+                                    <li class="dtui-treelist-post">},</li>
+                                </ul>
+                            </li>
+                            <li class="dtui-treelist-i dtui-treelist-parent dtui-treelist-collapsed" data-item-path="3" data-item-level="0" data-item-encode-html="0">
+                                <i class="dtui-treelist-thumb"></i>
+                                <span class="dtui-treelist-text" data-item-path="3">
+                                    <span class="ecdoc-api-tree-text-prop">events</span>
+                                    : {...},
+                                </span>
+                                <ul class="dtui-treelist-list" style="display:none">
+                                    <li class="dtui-treelist-i dtui-treelist-parent dtui-treelist-collapsed" data-item-path="3,0" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="3,0">
+                                            <span class="ecdoc-api-tree-text-prop">鼠标事件</span>
+                                            : {...},
+                                        </span>
+                                        <ul class="dtui-treelist-list" style="display:none">
+                                            <li class="dtui-treelist-i " data-item-path="3,0,0" data-item-level="2" data-item-encode-html="0">
+                                                <i class="dtui-treelist-thumb"></i>
+                                                <span class="dtui-treelist-text" data-item-path="3,0,0">
+                                                    <span class="ecdoc-api-tree-text-prop">click</span>
+                                                    :
+                                                    <span class="ecdoc-api-tree-text-default">...</span>
+                                                    ,
+                                                </span>
+                                            </li>
+                                            <li class="dtui-treelist-i " data-item-path="3,0,1" data-item-level="2" data-item-encode-html="0">
+                                                <i class="dtui-treelist-thumb"></i>
+                                                <span class="dtui-treelist-text" data-item-path="3,0,1">
+                                                    <span class="ecdoc-api-tree-text-prop">dblclick</span>
+                                                    :
+                                                    <span class="ecdoc-api-tree-text-default">...</span>
+                                                    ,
+                                                </span>
+                                            </li>
+                                            <li class="dtui-treelist-i " data-item-path="3,0,2" data-item-level="2" data-item-encode-html="0">
+                                                <i class="dtui-treelist-thumb"></i>
+                                                <span class="dtui-treelist-text" data-item-path="3,0,2">
+                                                    <span class="ecdoc-api-tree-text-prop">mousedown</span>
+                                                    :
+                                                    <span class="ecdoc-api-tree-text-default">...</span>
+                                                    ,
+                                                </span>
+                                            </li>
+                                            <li class="dtui-treelist-i " data-item-path="3,0,3" data-item-level="2" data-item-encode-html="0">
+                                                <i class="dtui-treelist-thumb"></i>
+                                                <span class="dtui-treelist-text" data-item-path="3,0,3">
+                                                    <span class="ecdoc-api-tree-text-prop">mousemove</span>
+                                                    :
+                                                    <span class="ecdoc-api-tree-text-default">...</span>
+                                                    ,
+                                                </span>
+                                            </li>
+                                            <li class="dtui-treelist-i " data-item-path="3,0,4" data-item-level="2" data-item-encode-html="0">
+                                                <i class="dtui-treelist-thumb"></i>
+                                                <span class="dtui-treelist-text" data-item-path="3,0,4">
+                                                    <span class="ecdoc-api-tree-text-prop">mouseup</span>
+                                                    :
+                                                    <span class="ecdoc-api-tree-text-default">...</span>
+                                                    ,
+                                                </span>
+                                            </li>
+                                            <li class="dtui-treelist-i " data-item-path="3,0,5" data-item-level="2" data-item-encode-html="0">
+                                                <i class="dtui-treelist-thumb"></i>
+                                                <span class="dtui-treelist-text" data-item-path="3,0,5">
+                                                    <span class="ecdoc-api-tree-text-prop">mouseover</span>
+                                                    :
+                                                    <span class="ecdoc-api-tree-text-default">...</span>
+                                                    ,
+                                                </span>
+                                            </li>
+                                            <li class="dtui-treelist-i " data-item-path="3,0,6" data-item-level="2" data-item-encode-html="0">
+                                                <i class="dtui-treelist-thumb"></i>
+                                                <span class="dtui-treelist-text" data-item-path="3,0,6">
+                                                    <span class="ecdoc-api-tree-text-prop">mouseout</span>
+                                                    :
+                                                    <span class="ecdoc-api-tree-text-default">...</span>
+                                                    ,
+                                                </span>
+                                            </li>
+                                            <li class="dtui-treelist-post">},</li>
+                                        </ul>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="3,1" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="3,1">
+                                            <span class="ecdoc-api-tree-text-prop">legendselectchanged</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">...</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="3,2" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="3,2">
+                                            <span class="ecdoc-api-tree-text-prop">legendselected</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">...</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="3,3" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="3,3">
+                                            <span class="ecdoc-api-tree-text-prop">legendunselected</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">...</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="3,4" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="3,4">
+                                            <span class="ecdoc-api-tree-text-prop">datazoom</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">...</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="3,5" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="3,5">
+                                            <span class="ecdoc-api-tree-text-prop">datarangeselected</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">...</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="3,6" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="3,6">
+                                            <span class="ecdoc-api-tree-text-prop">timelinechanged</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">...</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="3,7" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="3,7">
+                                            <span class="ecdoc-api-tree-text-prop">timelineplaychanged</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">...</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="3,8" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="3,8">
+                                            <span class="ecdoc-api-tree-text-prop">restore</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">...</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="3,9" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="3,9">
+                                            <span class="ecdoc-api-tree-text-prop">dataviewchanged</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">...</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="3,10" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="3,10">
+                                            <span class="ecdoc-api-tree-text-prop">magictypechanged</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">...</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="3,11" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="3,11">
+                                            <span class="ecdoc-api-tree-text-prop">pieselectchanged</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">...</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="3,12" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="3,12">
+                                            <span class="ecdoc-api-tree-text-prop">pieselected</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">...</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="3,13" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="3,13">
+                                            <span class="ecdoc-api-tree-text-prop">pieunselected</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">...</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="3,14" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="3,14">
+                                            <span class="ecdoc-api-tree-text-prop">mapselectchanged</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">...</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="3,15" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="3,15">
+                                            <span class="ecdoc-api-tree-text-prop">mapselected</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">...</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-i " data-item-path="3,16" data-item-level="1" data-item-encode-html="0">
+                                        <i class="dtui-treelist-thumb"></i>
+                                        <span class="dtui-treelist-text" data-item-path="3,16">
+                                            <span class="ecdoc-api-tree-text-prop">mapunselected</span>
+                                            :
+                                            <span class="ecdoc-api-tree-text-default">...</span>
+                                            ,
+                                        </span>
+                                    </li>
+                                    <li class="dtui-treelist-post">},</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;">
+                        <div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                    </div>
+                    <div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px;">
+                        <div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="ecdoc-api-right-area">
+                <div class="ecdoc-api-doc-group-area ps-container ps-active-y" data-ps-id="5797d093-9210-850f-776f-95e4ef38e8e3">
+                    <div class="ecdoc-api-doc-group-content">
+                        <div class="ecdoc-api-doc-group-title"> <strong>echarts</strong>
+                        </div>
+                        <div class="ecdoc-api-doc-group-title-desc">
+                            <p>
+                                全局 echarts 对象，在 script 标签引入
+                                <code>echarts.js</code>
+                                文件后获得，或者在 AMD 环境中通过
+                                <code>require('echarts')</code>
+                                获得。
+                            </p>
+
+                        </div>
+
+                        <div class="ecdoc-api-doc-group-line " data-tree-item-id="ecapidocid-21">
+                            <div data-tree-item-id="ecapidocid-21" class="ecdoc-api-doc-line-expand iconfont" style="display:none"></div>
+                            <div class="ecdoc-api-doc-line-head" data-tree-item-id="ecapidocid-21">
+                                <span class="ecdoc-api-doc-line-label">
+                                    echarts. <strong>init</strong>
+                                </span>
+                                <span class="ecdoc-api-doc-line-type">Function</span>
+                            </div>
+                            <div class="ecdoc-api-doc-line-default"></div>
+                            <pre><code class="lang-js prettyprint prettyprinted"><span class="pun">(</span><span class="pln">dom</span><span class="pun">:</span><span class="pln"></span><span class="typ">HTMLDivElement</span><span class="pun">|</span><span class="typ">HTMLCanvasElement</span><span class="pun">,</span><span class="pln">theme</span><span class="pun">?:</span><span class="pln"></span><span class="typ">Object</span><span class="pun">|</span><span class="pln">string</span><span class="pun">,</span><span class="pln">opts</span><span class="pun">?:</span><span class="pln"></span><span class="pun">{</span><span class="pln">devicePixelRatio</span><span class="pun">?:</span><span class="pln"> number
+    renderer</span><span class="pun">?:</span><span class="pln">string</span><span class="pun">})</span><span class="pln"></span><span class="pun">=&gt;</span><span class="pln"></span><span class="typ">ECharts</span></code></pre>
+                            <p>
+                                创建一个 ECharts 实例，返回
+                                <a href="http://echarts.baidu.com/api.html#echartsInstance">echartsInstance</a>
+                                ，不能再单个容器上初始化多个 ECharts 实例。
+                            </p>
+                            <p>
+                                <strong>参数</strong>
+                            </p>
+                            <ul>
+                                <li>
+                                    <p>
+                                        <code>dom</code>
+                                    </p>
+                                    <p>
+                                        实例容器，一般是一个具有高宽的
+                                        <code>div</code>
+                                        元素。
+                                    </p>
+                                    <p>
+                                        <strong>注：</strong>
+                                        如果
+                                        <code>div</code>
+                                        是隐藏的，ECharts 可能会获取不到
+                                        <code>div</code>
+                                        的高宽导致初始化失败，这时候可以明确指定
+                                        <code>div</code>
+                                        的
+                                        <code>style.width</code>
+                                        和
+                                        <code>style.height</code>
+                                        ，或者在
+                                        <code>div</code>
+                                        显示后手动调用
+                                        <a href="http://echarts.baidu.com/echartsInstance.resize" target="_blank">echartsInstance.resize</a>
+                                        调整尺寸。
+                                    </p>
+                                    <p>
+                                        ECharts 3 中支持直接使用
+                                        <code>canvas</code>
+                                        元素作为容器，这样绘制完图表可以直接将 canvas 作为图片应用到其它地方，例如在 WebGL 中作为贴图，这跟使用
+                                        <a href="http://echarts.baidu.com/api.html#echartsInstance.getDataURL">echartsInstance.getDataURL</a>
+                                        生成图片链接相比可以支持图表的实时刷新。
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <code>theme</code>
+                                    </p>
+                                    <p>
+                                        应用的主题。可以是一个主题的配置对象，也可以是使用已经通过
+                                        <a href="http://echarts.baidu.com/api.html#echarts.registerTheme">echarts.registerTheme</a>
+                                        注册的主题名称。
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <code>opts</code>
+                                    </p>
+                                    <p>附加参数。有下面几个可选项：</p>
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                <code>devicePixelRatio</code>
+                                            </p>
+                                            <p>
+                                                设备像素比，默认取浏览器的值
+                                                <code>window.devicePixelRatio</code>
+                                                。
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <code>renderer</code>
+                                            </p>
+                                            <p>
+                                                渲染器，目前仅支持
+                                                <code>'canvas'</code>
+                                                。
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div class="ecdoc-api-doc-group-line " data-tree-item-id="ecapidocid-22">
+                            <div data-tree-item-id="ecapidocid-22" class="ecdoc-api-doc-line-expand iconfont" style="display:none"></div>
+                            <div class="ecdoc-api-doc-line-head" data-tree-item-id="ecapidocid-22">
+                                <span class="ecdoc-api-doc-line-label">
+                                    echarts.
+                                    <strong>connect</strong>
+                                </span>
+                                <span class="ecdoc-api-doc-line-type">Function</span>
+                            </div>
+                            <div class="ecdoc-api-doc-line-default"></div>
+                            <pre><code class="lang-js prettyprint prettyprinted"><span class="pun">(</span><span class="pln">group</span><span class="pun">:</span><span class="pln">string</span><span class="pun">|</span><span class="typ">Array</span><span class="pun">)</span></code></pre>
+                            <p>多个图表实例实现联动。</p>
+                            <p>
+                                <strong>参数：</strong>
+                            </p>
+                            <ul>
+                                <li>
+                                    <code>group</code>
+                                    group 的 id，或者图表实例的数组。
+                                </li>
+                            </ul>
+                            <p>
+                                <strong>示例：</strong>
+                            </p>
+                            <pre><code class="lang-js prettyprint prettyprinted"><span class="com">// 分别设置每个实例的 group id</span><span class="pln">chart1</span><span class="pun">.</span><span class="pln">group </span><span class="pun">=</span><span class="pln"></span><span class="str">'group1'</span><span class="pun">;</span><span class="pln">chart2</span><span class="pun">.</span><span class="pln">group </span><span class="pun">=</span><span class="pln"></span><span class="str">'group1'</span><span class="pun">;</span><span class="pln">echarts</span><span class="pun">.</span><span class="pln">connect</span><span class="pun">(</span><span class="str">'group1'</span><span class="pun">);</span><span class="pln"></span><span class="com">// 或者可以直接传入需要联动的实例数组</span><span class="pln">echarts</span><span class="pun">.</span><span class="pln">connect</span><span class="pun">([</span><span class="pln">chart1</span><span class="pun">,</span><span class="pln">chart2</span><span class="pun">]);</span></code></pre>
+
+                        </div>
+
+                        <div class="ecdoc-api-doc-group-line " data-tree-item-id="ecapidocid-23">
+                            <div data-tree-item-id="ecapidocid-23" class="ecdoc-api-doc-line-expand iconfont" style="display:none"></div>
+                            <div class="ecdoc-api-doc-line-head" data-tree-item-id="ecapidocid-23">
+                                <span class="ecdoc-api-doc-line-label">
+                                    echarts.
+                                    <strong>disConnect</strong>
+                                </span>
+                                <span class="ecdoc-api-doc-line-type">Function</span>
+                            </div>
+                            <div class="ecdoc-api-doc-line-default"></div>
+                            <pre><code class="lang-js prettyprint prettyprinted"><span class="pun">(</span><span class="pln">group</span><span class="pun">:</span><span class="pln">string</span><span class="pun">)</span></code></pre>
+                            <p>
+                                解除图表实例的联动，如果只需要移除单个实例，可以将通过将该图表实例
+                                <code>group</code>
+                                设为空。
+                            </p>
+                            <p>
+                                <strong>参数：</strong>
+                            </p>
+                            <ul>
+                                <li>
+                                    <p>
+                                        <code>group</code>
+                                    </p>
+                                    <p>group 的 id。</p>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div class="ecdoc-api-doc-group-line " data-tree-item-id="ecapidocid-24">
+                            <div data-tree-item-id="ecapidocid-24" class="ecdoc-api-doc-line-expand iconfont" style="display:none"></div>
+                            <div class="ecdoc-api-doc-line-head" data-tree-item-id="ecapidocid-24">
+                                <span class="ecdoc-api-doc-line-label">
+                                    echarts.
+                                    <strong>dispose</strong>
+                                </span>
+                                <span class="ecdoc-api-doc-line-type">Function</span>
+                            </div>
+                            <div class="ecdoc-api-doc-line-default"></div>
+                            <pre><code class="lang-js prettyprint prettyprinted"><span class="pun">(</span><span class="pln">target</span><span class="pun">:</span><span class="pln"></span><span class="typ">ECharts</span><span class="pun">|</span><span class="typ">HTMLDivElement</span><span class="pun">|</span><span class="typ">HTMLCanvasElement</span><span class="pun">)</span></code></pre>
+                            <p>销毁实例，实例销毁后无法再被使用。</p>
+
+                        </div>
+
+                        <div class="ecdoc-api-doc-group-line " data-tree-item-id="ecapidocid-25">
+                            <div data-tree-item-id="ecapidocid-25" class="ecdoc-api-doc-line-expand iconfont" style="display:none"></div>
+                            <div class="ecdoc-api-doc-line-head" data-tree-item-id="ecapidocid-25">
+                                <span class="ecdoc-api-doc-line-label">
+                                    echarts.
+                                    <strong>getInstanceByDom</strong>
+                                </span>
+                                <span class="ecdoc-api-doc-line-type">Function</span>
+                            </div>
+                            <div class="ecdoc-api-doc-line-default"></div>
+                            <pre><code class="lang-js prettyprint prettyprinted"><span class="pun">(</span><span class="pln">target</span><span class="pun">:</span><span class="pln"></span><span class="typ">HTMLDivElement</span><span class="pun">|</span><span class="typ">HTMLCanvasElement</span><span class="pun">)</span><span class="pln"></span><span class="pun">=&gt;</span><span class="pln"></span><span class="typ">ECharts</span></code></pre>
+                            <p>获取 dom 容器上的实例。</p>
+
+                        </div>
+
+                        <div class="ecdoc-api-doc-group-line " data-tree-item-id="ecapidocid-26">
+                            <div data-tree-item-id="ecapidocid-26" class="ecdoc-api-doc-line-expand iconfont" style="display:none"></div>
+                            <div class="ecdoc-api-doc-line-head" data-tree-item-id="ecapidocid-26">
+                                <span class="ecdoc-api-doc-line-label">
+                                    echarts.
+                                    <strong>registerMap</strong>
+                                </span>
+                                <span class="ecdoc-api-doc-line-type">Function</span>
+                            </div>
+                            <div class="ecdoc-api-doc-line-default"></div>
+                            <pre><code class="lang-js prettyprint prettyprinted"><span class="pun">(</span><span class="pln">mapName</span><span class="pun">:</span><span class="pln">string</span><span class="pun">,</span><span class="pln">geoJson</span><span class="pun">:</span><span class="pln"></span><span class="typ">Object</span><span class="pun">,</span><span class="pln">specialAreas</span><span class="pun">?:</span><span class="pln"></span><span class="typ">Object</span><span class="pun">)</span></code></pre>
+                            <p>
+                                注册可用的地图，必须在包括
+                                <a href="http://echarts.baidu.com/option.html#geo" target="_blank">geo</a>
+                                组件或者
+                                <a href="http://echarts.baidu.com/option.html#series-map" target="_blank">map</a>
+                                图表类型的时候才能使用。
+                            </p>
+                            <p>
+                                使用方法见
+                                <a href="http://echarts.baidu.com/option.html#geo.map" target="_blank">option.geo</a>
+                                。
+                            </p>
+                            <p>
+                                <strong>参数：</strong>
+                            </p>
+                            <ul>
+                                <li>
+                                    <p>
+                                        <code>mapName</code>
+                                    </p>
+                                    <p>
+                                        地图名称，在
+                                        <a href="http://echarts.baidu.com/option.html#geo" target="_blank">geo</a>
+                                        组件或者
+                                        <a href="http://echarts.baidu.com/option.html#series-map" target="_blank">map</a>
+                                        图表类型中设置的
+                                        <code>map</code>
+                                        对应的就是该值。
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <code>geoJson</code>
+                                    </p>
+                                    <p>
+                                        GeoJson 格式的数据，具体格式见
+                                        <a href="http://geojson.org/" target="_blank">http://geojson.org/</a>
+                                        。
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <code>specialAreas</code>
+                                    </p>
+                                    <p>可选。将地图中的部分区域缩放到合适的位置，可以使得整个地图的显示更加好看。</p>
+                                    <p>
+                                        <strong>示例
+                                            <a href="http://echarts.baidu.com/gallery/editor.html?c=map-usa" target="_blank">USA Population Estimates</a>
+                                            ：</strong> 
+                                    </p>
+                                    <pre><code class="lang-js prettyprint prettyprinted"><span class="pln">echarts</span><span class="pun">.</span><span class="pln">registerMap</span><span class="pun">(</span><span class="str">'USA'</span><span class="pun">,</span><span class="pln">usaJson</span><span class="pun">,</span><span class="pln"></span><span class="pun">{</span><span class="pln"></span><span class="com">// 把阿拉斯加移到美国主大陆左下方</span><span class="pln"></span><span class="typ">Alaska</span><span class="pun">:</span><span class="pln"></span><span class="pun">{</span><span class="pln"></span><span class="com">// 左上角经度</span><span class="pln">left</span><span class="pun">:</span><span class="pln"></span><span class="pun">-</span><span class="lit">131</span><span class="pun">,</span><span class="pln"></span><span class="com">// 左上角纬度</span><span class="pln">top</span><span class="pun">:</span><span class="pln"></span><span class="lit">25</span><span class="pun">,</span><span class="pln"></span><span class="com">// 经度横跨的范围</span><span class="pln">width</span><span class="pun">:</span><span class="pln"></span><span class="lit">15</span><span class="pln"></span><span class="pun">},</span><span class="pln"></span><span class="com">// 夏威夷</span><span class="pln"></span><span class="typ">Hawaii</span><span class="pun">:</span><span class="pln"></span><span class="pun">{</span><span class="pln">left</span><span class="pun">:</span><span class="pln"></span><span class="pun">-</span><span class="lit">110</span><span class="pun">,</span><span class="pln">top</span><span class="pun">:</span><span class="pln"></span><span class="lit">28</span><span class="pun">,</span><span class="pln">width</span><span class="pun">:</span><span class="pln"></span><span class="lit">5</span><span class="pln"></span><span class="pun">},</span><span class="pln"></span><span class="com">// 波多黎各</span><span class="pln"></span><span class="str">'Puerto Rico'</span><span class="pun">:</span><span class="pln"></span><span class="pun">{</span><span class="pln">left</span><span class="pun">:</span><span class="pln"></span><span class="pun">-</span><span class="lit">76</span><span class="pun">,</span><span class="pln">top</span><span class="pun">:</span><span class="pln"></span><span class="lit">26</span><span class="pun">,</span><span class="pln">width</span><span class="pun">:</span><span class="pln"></span><span class="lit">2</span><span class="pln"></span><span class="pun">}</span><span class="pln"></span><span class="pun">});</span></code></pre>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div class="ecdoc-api-doc-group-line " data-tree-item-id="ecapidocid-27">
+                            <div data-tree-item-id="ecapidocid-27" class="ecdoc-api-doc-line-expand iconfont" style="display:none"></div>
+                            <div class="ecdoc-api-doc-line-head" data-tree-item-id="ecapidocid-27">
+                                <span class="ecdoc-api-doc-line-label">
+                                    echarts.
+                                    <strong>registerTheme</strong>
+                                </span>
+                                <span class="ecdoc-api-doc-line-type">Function</span>
+                            </div>
+                            <div class="ecdoc-api-doc-line-default"></div>
+                            <pre><code class="lang-js prettyprint prettyprinted"><span class="pun">(</span><span class="pln">themeName</span><span class="pun">:</span><span class="pln">string</span><span class="pun">,</span><span class="pln">theme</span><span class="pun">:</span><span class="pln"></span><span class="typ">Object</span><span class="pun">)</span></code></pre>
+                            <p>
+                                注册主题，用于
+                                <a href="http://echarts.baidu.com/api.html#echarts.init">初始化实例</a>
+                                的时候指定。
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;">
+                        <div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                    </div>
+                    <div class="ps-scrollbar-y-rail" style="top: 0px; height: 805px; right: 3px;">
+                        <div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 210px;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ecdoc-api-hover-desc" style="display:none"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./ECharts Documentationapi_files/jquery.min.js"></script>
+    <script type="text/javascript" src="./ECharts Documentationapi_files/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./ECharts Documentationapi_files/validator.js"></script>
+    <script type="text/javascript">window.globalArgsExtra = {
+    pageName: 'api',
+    schemaUrl: 'documents/cn/api.json',
+    initHash: 'echarts',
+    hideTreeRoot: true,
+    docTreeChildrenPre: 'API',
+    docTreeChildrenPost: '',
+    lang: {
+        cn: {
+            queryBoxTextFuzzyPath: 'API搜索',
+            queryBoxPlaceholderFuzzyPath: 'API名称搜索（快捷键\'/\'）'
+        }
+    }
+};</script>
+    <script type="text/javascript">document.getElementById('nav-doc').className = 'active';
+
+var vendorPath = '../vendors';
+
+define('globalArgs', extend({
+    version: '1458543500882',
+    basePath: './',
+    // Schema url is added by each doc page
+    schemaUrl: '',
+    iconfont: {
+        down: '&#' + parseInt('e600', 16),
+        up: '&#' + parseInt('e603', 16),
+        right: '&#' + parseInt('e602', 16),
+        left: '&#' + parseInt('e604', 16),
+        handLens: '&#' + parseInt('e601', 16)
+    }
+}, window.globalArgsExtra || {}));
+
+define('prettyPrint', function () {
+    return prettyPrint;
+});
+
+define('ecLog', function () {
+    return ecLog;
+});
+
+require.config({
+    baseUrl: './js',
+    paths: {
+        dt: vendorPath + '/dt/0.0.1',
+        tpl: vendorPath + '/dt/0.0.1/tplLoader',
+        etpl: vendorPath + '/etpl/3.0.0/etpl.min',
+        signals: vendorPath + '/signals/1.0.0/signals.min',
+        hasher: vendorPath + '/hasher/1.2.0/hasher.min',
+        perfectScrollbar: vendorPath + '/perfect-scrollbar/0.6.8/js/perfect-scrollbar'
+    },
+    urlArgs: '_v_=1458543500882'
+});
+
+require(['docTool/main'], function (main) {
+    main.init();
+});
+
+function extend(tar, src) {
+    for (var name in src) {
+        if (src.hasOwnProperty(name)) {
+            tar[name] = src[name];
+        }
+    }
+    return tar;
+}</script>
+    <script type="text/javascript" src="./ECharts Documentationapi_files/hm(1).js"></script>
+    <div id="gj_NavDiv" style="position: fixed; z-index: 2147483640; right: 0px; width: 0px; height: 0px; bottom: 59px; display: block;">
+        <iframe src="./ECharts Documentationapi_files/adcpage.html" id="gj_SafeDaohang" frameborder="0" scrolling="0" width="100%" height="100%" noresize="noresize" style="position: fixed; z-index: 2147483640; right: 0px; width: 0px; height: 0px; bottom: 99px; border: 0px none;"></iframe>
+    </div>
+    <div id="gj_mini" style="right: 10px; bottom: 50px; display: block; position: fixed; z-index: 2147483641; background-image: url(&quot;http://s.pc.qq.com/navigate/adc/v2/hover-ok.png&quot;); background-position: 0px 0px;"></div>
+    <div id="gj_shard" style="right: -70px; bottom: -20px; position: fixed; z-index: 2147483643; display: none;"></div>
+    <div id="gj_circle" style="right: 10px; bottom: 50px; position: fixed; z-index: 2147483642;"></div>
+    <div id="gj_bar_left" style="right: 60px; bottom: 58px; position: fixed; z-index: 2147483640; overflow: hidden; width: 0px;">
+        <div id="tipstext" style="white-space:nowrap;font-size: 14px;font-weight: bold;overflow:hidden;">0个广告已降服</div>
+        <div id="tipstext" style="color:#CFDFFE;overflow:hidden;padding-top:0px;white-space: nowrap;">可以清爽的上网了~</div>
+    </div>
+</body>
+</html>

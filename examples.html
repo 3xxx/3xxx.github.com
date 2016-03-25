@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://echarts.baidu.com/examples.html -->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" user-scalable="no">
+	<link rel="shortcut icon" href="http://echarts.baidu.com/images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="./ECharts Examples_files/bootstrap.min.css">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries-->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="./ECharts Examples_files/main.css">
+	<style>@font-face {font-family:"noto-thin";src:local("Microsoft Yahei");}@font-face {font-family:"noto-light";src:local("Microsoft Yahei");}</style>
+	<script src="./ECharts Examples_files/hm.js"></script>
+	<script id="font-hack" type="text/javascript">if (/windows/i.test(navigator.userAgent)) {
+    var el = document.createElement('style');
+    el.innerHTML = ''
+        + '@font-face {font-family:"noto-thin";src:local("Microsoft Yahei");}'
+        + '@font-face {font-family:"noto-light";src:local("Microsoft Yahei");}';
+    document.head.insertBefore(el, document.getElementById('font-hack'));
+}
+</script>
+	<style type="text/css">div[id="bdyx_float_rb"]{display:none !important;}</style>
+	<title>ECharts Examples</title>
+	<link rel="stylesheet" href="./ECharts Examples_files/perfect-scrollbar.min.css">
+	<style type="text/css">#gj_mini{background-image:url(http://s.pc.qq.com/navigate/adc/v2/hover-ok.png);background-repeat:no-repeat;display:block;width:58px;height:58px;background-position:0 0}#gj_shard{background-image:url(http://s.pc.qq.com/navigate/adc/v2/suipian.png);background-repeat:no-repeat;display:none;width:200px;height:200px;background-position:0 0}#gj_circle{background-image:url(http://s.pc.qq.com/navigate/adc/v2/guangquan.png);background-repeat:no-repeat;display:none;width:58px;height:58px;background-position:0 0}#gj_bar_left{background: url(http://s.pc.qq.com/navigate/adc/v2/zuo.png) no-repeat; height:42px; width :0px; font-family: "Microsoft YaHei" ! important;overflow:hidden; display:block;}#gj_bar_left #tipstext{line-height:normal;padding-left: 20px;padding-top: 3px;font-size: 12px;padding-right: 10px;color: #fff;overflow:hidden;}#gj_bar_left span{font-size: 14px;font-weight: bold;overflow:hidden;}</style>
+</head>
+	<!--[if lte IE 8]>
+<body class="lower-ie">
+	<![endif]-->
+	<!--[if (gt IE 8)|!(IE)]>
+<body class="undefined"></body>
+	<![endif]-->
+<body>
+	<div id="lowie-main">
+		<img src="./ECharts Examples_files/forie.png" alt="ie tip"></div>
+	<div id="main">
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="http://echarts.baidu.com/index.html" class="navbar-brand">
+						<img src="./ECharts Examples_files/logo.png" alt="echarts logo" class="navbar-logo"></a>
+				</div>
+				<div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li id="nav-index">
+							<a href="/index.html">首页</a>
+						</li>
+						<li id="nav-doc" class="dropdown">
+							<a href="/examples.html#" data-toggle="dropdown" class="dropdown-toggle">
+								文档 <b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="/tutorial.html">教程</a>
+								</li>
+								<li>
+									<a href="/api.html">API</a>
+								</li>
+								<li>
+									<a href="/option.html">配置项手册</a>
+								</li>
+								<li>
+									<a href="/changelog.html">Changelog</a>
+								</li>
+							</ul>
+						</li>
+						<li id="nav-examples" class="active">
+							<a href="/examples.html">实例</a>
+						</li>
+						<li id="nav-download" class="dropdown">
+							<a href="/examples.html#" data-toggle="dropdown" class="dropdown-toggle">
+								下载 <b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="/download.html">下载</a>
+								</li>
+								<li>
+									<a href="/builder.html">在线构建</a>
+								</li>
+								<li>
+									<a href="/download-map.html">地图</a>
+								</li>
+								<li>
+									<a href="/download-theme.html">主题</a>
+								</li>
+							</ul>
+						</li>
+						<li id="nav-github">
+							<a href="https://github.com/3xxx/pipeline" target="_blank">GitHub</a>
+						</li>
+						<li id="nav-2" class="0">
+							<a href="http://github.com/3xxx/HydroCMS">HydroCMS</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div id="nav-mask" style="display: none;"></div>
+		<div id="nav-layer" class="ps-container ps-active-y" data-ps-id="be2123e7-f9f5-57f4-4465-a26607729d45" style="display: none; top: 51px;">
+			<ul class="chart-list">
+				<li>
+					<a href="http://echarts.baidu.com/demo.html#effectScatter-map">
+						<img src="./ECharts Examples_files/effectScatter-map.png"></a>
+				</li>
+				<li>
+					<a href="http://echarts.baidu.com/demo.html#scatter-anscombe-quartet">
+						<img src="./ECharts Examples_files/scatter-anscombe-quartet.png"></a>
+				</li>
+				<li>
+					<a href="http://echarts.baidu.com/demo.html#scatter-aqi-color">
+						<img src="./ECharts Examples_files/scatter-aqi-color.png"></a>
+				</li>
+				<li>
+					<a href="http://echarts.baidu.com/demo.html#scatter-large">
+						<img src="./ECharts Examples_files/scatter-large.png"></a>
+				</li>
+				<li>
+					<a href="http://echarts.baidu.com/demo.html#scatter-life-expectancy-timeline">
+						<img src="./ECharts Examples_files/scatter-life-expectancy-timeline.png"></a>
+				</li>
+				<li>
+					<a href="http://echarts.baidu.com/demo.html#scatter-map">
+						<img src="./ECharts Examples_files/scatter-map.png"></a>
+				</li>
+				<li>
+					<a href="http://echarts.baidu.com/demo.html#scatter-painter-choice">
+						<img src="./ECharts Examples_files/scatter-painter-choice.png"></a>
+				</li>
+				<li>
+					<a href="http://echarts.baidu.com/demo.html#scatter-polar-punchCard">
+						<img src="./ECharts Examples_files/scatter-polar-punchCard.png"></a>
+				</li>
+				<li>
+					<a href="http://echarts.baidu.com/demo.html#scatter-punchCard">
+						<img src="./ECharts Examples_files/scatter-punchCard.png"></a>
+				</li>
+				<li>
+					<a href="http://echarts.baidu.com/demo.html#scatter-weibo">
+						<img src="./ECharts Examples_files/scatter-weibo.png"></a>
+				</li>
+				<li>
+					<a href="http://echarts.baidu.com/demo.html#scatter-weight">
+						<img src="./ECharts Examples_files/scatter-weight.png"></a>
+				</li>
+				<li>
+					<a href="http://echarts.baidu.com/demo.html#scatter-world-population">
+						<img src="./ECharts Examples_files/scatter-world-population.png"></a>
+				</li>
+			</ul>
+			<div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;">
+				<div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+			</div>
+			<div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px; height: 350px;">
+				<div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 179px;"></div>
+			</div>
+		</div>
+		<div id="left-chart-nav" class="ps-container ps-active-y" data-ps-id="bd6aea64-fa46-c5c2-a6ff-fac74b0fea9d">
+			<ul>
+				<li>
+					<a class="left-chart-nav-link" id="left-chart-nav-scatter" href="http://echarts.baidu.com/examples.html#chart-type-scatter">
+						<div class="chart-icon"></div>
+						<div class="chart-name">散点图</div>
+					</a>
+				</li>
+				<li>
+					<a class="left-chart-nav-link" id="left-chart-nav-line" href="http://echarts.baidu.com/examples.html#chart-type-line">
+						<div class="chart-icon"></div>
+						<div class="chart-name">折线图</div>
+					</a>
+				</li>
+				<li>
+					<a class="left-chart-nav-link" id="left-chart-nav-bar" href="http://echarts.baidu.com/examples.html#chart-type-bar">
+						<div class="chart-icon"></div>
+						<div class="chart-name">柱状图</div>
+					</a>
+				</li>
+				<li>
+					<a class="left-chart-nav-link" id="left-chart-nav-map" href="http://echarts.baidu.com/examples.html#chart-type-map">
+						<div class="chart-icon"></div>
+						<div class="chart-name">地图</div>
+					</a>
+				</li>
+				<li>
+					<a class="left-chart-nav-link" id="left-chart-nav-pie" href="http://echarts.baidu.com/examples.html#chart-type-pie">
+						<div class="chart-icon"></div>
+						<div class="chart-name">饼图</div>
+					</a>
+				</li>
+				<li>
+					<a class="left-chart-nav-link" id="left-chart-nav-radar" href="http://echarts.baidu.com/examples.html#chart-type-radar">
+						<div class="chart-icon"></div>
+						<div class="chart-name">雷达图</div>
+					</a>
+				</li>
+				<li>
+					<a class="left-chart-nav-link" id="left-chart-nav-candlestick" href="http://echarts.baidu.com/examples.html#chart-type-candlestick">
+						<div class="chart-icon"></div>
+						<div class="chart-name">k线图</div>
+					</a>
+				</li>
+				<li>
+					<a class="left-chart-nav-link" id="left-chart-nav-boxplot" href="http://echarts.baidu.com/examples.html#chart-type-boxplot">
+						<div class="chart-icon"></div>
+						<div class="chart-name">箱线图</div>
+					</a>
+				</li>
+				<li>
+					<a class="left-chart-nav-link" id="left-chart-nav-heatmap" href="http://echarts.baidu.com/examples.html#chart-type-heatmap">
+						<div class="chart-icon"></div>
+						<div class="chart-name">热力图</div>
+					</a>
+				</li>
+				<li>
+					<a class="left-chart-nav-link" id="left-chart-nav-graph" href="http://echarts.baidu.com/examples.html#chart-type-graph">
+						<div class="chart-icon"></div>
+						<div class="chart-name">关系图</div>
+					</a>
+				</li>
+				<li>
+					<a class="left-chart-nav-link" id="left-chart-nav-treemap" href="http://echarts.baidu.com/examples.html#chart-type-treemap">
+						<div class="chart-icon"></div>
+						<div class="chart-name">矩形树图</div>
+					</a>
+				</li>
+				<li>
+					<a class="left-chart-nav-link" id="left-chart-nav-parallel" href="http://echarts.baidu.com/examples.html#chart-type-parallel">
+						<div class="chart-icon"></div>
+						<div class="chart-name">平行坐标</div>
+					</a>
+				</li>
+				<li>
+					<a class="left-chart-nav-link" id="left-chart-nav-sankey" href="http://echarts.baidu.com/examples.html#chart-type-sankey">
+						<div class="chart-icon"></div>
+						<div class="chart-name">桑基图</div>
+					</a>
+				</li>
+				<li>
+					<a class="left-chart-nav-link" id="left-chart-nav-funnel" href="http://echarts.baidu.com/examples.html#chart-type-funnel">
+						<div class="chart-icon"></div>
+						<div class="chart-name">漏斗图</div>
+					</a>
+				</li>
+				<li>
+					<a class="left-chart-nav-link" id="left-chart-nav-gauge" href="http://echarts.baidu.com/examples.html#chart-type-gauge">
+						<div class="chart-icon"></div>
+						<div class="chart-name">仪表盘</div>
+					</a>
+				</li>
+			</ul>
+			<div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;">
+				<div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+			</div>
+			<div class="ps-scrollbar-y-rail" style="top: 0px; height: 805px; right: 3px;">
+				<div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 800px;"></div>
+			</div>
+		</div>
+		<div id="explore-container">
+			<div class="chart-list-panel">
+				<h3 class="chart-type-head" id="chart-type-scatter">散点图</h3>
+				<div class="row" id="chart-row-scatter">
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#effectScatter-map">
+								<div class="chart-hover">
+									<h4 class="chart-title">全国主要城市空气质量</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/effectScatter-map.png" src="./ECharts Examples_files/effectScatter-map.png" style="display: inline;"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#scatter-anscombe-quartet">
+								<div class="chart-hover">
+									<h4 class="chart-title">Anscombe's quartet</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/scatter-anscombe-quartet.png" src="./ECharts Examples_files/scatter-anscombe-quartet.png" style="display: inline;"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#scatter-aqi-color">
+								<div class="chart-hover">
+									<h4 class="chart-title">scatter-aqi-color</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/scatter-aqi-color.png" src="./ECharts Examples_files/scatter-aqi-color.png" style="display: inline;"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#scatter-large">
+								<div class="chart-hover">
+									<h4 class="chart-title">scatter-large</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/scatter-large.png" src="./ECharts Examples_files/scatter-large.png" style="display: inline;"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#scatter-life-expectancy-timeline">
+								<div class="chart-hover">
+									<h4 class="chart-title">1800</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/scatter-life-expectancy-timeline.png" src="./ECharts Examples_files/scatter-life-expectancy-timeline.png" style="display: inline;"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#scatter-map">
+								<div class="chart-hover">
+									<h4 class="chart-title">全国主要城市空气质量</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/scatter-map.png" src="./ECharts Examples_files/scatter-map.png" style="display: inline;"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#scatter-painter-choice">
+								<div class="chart-hover">
+									<h4 class="chart-title">Master Painter Color Choices Throughout History</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/scatter-painter-choice.png" src="./ECharts Examples_files/scatter-painter-choice.png" style="display: inline;"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#scatter-polar-punchCard">
+								<div class="chart-hover">
+									<h4 class="chart-title">Punch Card of Github</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/scatter-polar-punchCard.png" src="./ECharts Examples_files/scatter-polar-punchCard.png" style="display: inline;"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#scatter-punchCard">
+								<div class="chart-hover">
+									<h4 class="chart-title">Punch Card of Github</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/scatter-punchCard.png" src="./ECharts Examples_files/scatter-punchCard.png" style="display: inline;"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#scatter-weibo">
+								<div class="chart-hover">
+									<h4 class="chart-title">微博签到数据点亮中国</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/scatter-weibo.png" src="./ECharts Examples_files/scatter-weibo.png" style="display: inline;"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#scatter-weight">
+								<div class="chart-hover">
+									<h4 class="chart-title">男性女性身高体重分布</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/scatter-weight.png" src="./ECharts Examples_files/scatter-weight.png" style="display: inline;"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#scatter-world-population">
+								<div class="chart-hover">
+									<h4 class="chart-title">World Population (2011)</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/scatter-world-population.png" src="./ECharts Examples_files/scatter-world-population.png" style="display: inline;"></a>
+						</div>
+					</div>
+				</div>
+				<h3 class="chart-type-head" id="chart-type-line">折线图</h3>
+				<div class="row" id="chart-row-line">
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#area-rainfall">
+								<div class="chart-hover">
+									<h4 class="chart-title">雨量流量关系图</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/area-rainfall.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#area-simple">
+								<div class="chart-hover">
+									<h4 class="chart-title">大数据量折线图</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/area-simple.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#area-stack">
+								<div class="chart-hover">
+									<h4 class="chart-title">堆叠区域图</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/area-stack.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#confidence-band">
+								<div class="chart-hover">
+									<h4 class="chart-title">Confidence Band</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/confidence-band.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#dynamic-data2">
+								<div class="chart-hover">
+									<h4 class="chart-title">动态数据 + 时间坐标轴</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/dynamic-data2.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#grid-multiple">
+								<div class="chart-hover">
+									<h4 class="chart-title">雨量流量关系图</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/grid-multiple.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#line-easing">
+								<div class="chart-hover">
+									<h4 class="chart-title">line-easing</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/line-easing.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#line-log">
+								<div class="chart-hover">
+									<h4 class="chart-title">对数轴示例</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/line-log.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#line-marker">
+								<div class="chart-hover">
+									<h4 class="chart-title">未来一周气温变化</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/line-marker.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#line-polar">
+								<div class="chart-hover">
+									<h4 class="chart-title">极坐标双数值轴</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/line-polar.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#line-polar2">
+								<div class="chart-hover">
+									<h4 class="chart-title">极坐标双数值轴</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/line-polar2.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#line-stack">
+								<div class="chart-hover">
+									<h4 class="chart-title">折线图堆叠</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/line-stack.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#line-y-category">
+								<div class="chart-hover">
+									<h4 class="chart-title">line-y-category</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/line-y-category.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+				</div>
+				<h3 class="chart-type-head" id="chart-type-bar">柱状图</h3>
+				<div class="row" id="chart-row-bar">
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#bar-negative">
+								<div class="chart-hover">
+									<h4 class="chart-title">bar-negative</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/bar-negative.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#bar-negative2">
+								<div class="chart-hover">
+									<h4 class="chart-title">交错正负轴标签</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/bar-negative2.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#bar-stack">
+								<div class="chart-hover">
+									<h4 class="chart-title">bar-stack</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/bar-stack.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#bar-waterfall">
+								<div class="chart-hover">
+									<h4 class="chart-title">深圳月最低生活费组成（单位:元）</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/bar-waterfall.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#bar-waterfall2">
+								<div class="chart-hover">
+									<h4 class="chart-title">阶梯瀑布图</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/bar-waterfall2.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#bar-y-category-stack">
+								<div class="chart-hover">
+									<h4 class="chart-title">bar-y-category-stack</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/bar-y-category-stack.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#bar-y-category">
+								<div class="chart-hover">
+									<h4 class="chart-title">世界人口总量</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/bar-y-category.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#bar1">
+								<div class="chart-hover">
+									<h4 class="chart-title">某地区蒸发量和降水量</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/bar1.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#dynamic-data">
+								<div class="chart-hover">
+									<h4 class="chart-title">动态数据</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/dynamic-data.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#mix-line-bar">
+								<div class="chart-hover">
+									<h4 class="chart-title">mix-line-bar</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/mix-line-bar.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#mix-timeline-finance">
+								<div class="chart-hover">
+									<h4 class="chart-title">2002全国宏观经济指标</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/mix-timeline-finance.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#mix-zoom-on-value">
+								<div class="chart-hover">
+									<h4 class="chart-title">mix-zoom-on-value</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/mix-zoom-on-value.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+				</div>
+				<h3 class="chart-type-head" id="chart-type-map">地图</h3>
+				<div class="row" id="chart-row-map">
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#geo-lines">
+								<div class="chart-hover">
+									<h4 class="chart-title">模拟迁徙</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/geo-lines.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#map-HK">
+								<div class="chart-hover">
+									<h4 class="chart-title">香港18区人口密度 （2011）</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/map-HK.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#map-china-dataRange">
+								<div class="chart-hover">
+									<h4 class="chart-title">iphone销量</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/map-china-dataRange.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#map-china">
+								<div class="chart-hover">
+									<h4 class="chart-title">map-china</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/map-china.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#map-usa">
+								<div class="chart-hover">
+									<h4 class="chart-title">USA Population Estimates (2012)</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/map-usa.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#map-world-dataRange">
+								<div class="chart-hover">
+									<h4 class="chart-title">World Population (2010)</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/map-world-dataRange.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+				</div>
+				<h3 class="chart-type-head" id="chart-type-pie">饼图</h3>
+				<div class="row" id="chart-row-pie">
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#pie-custom">
+								<div class="chart-hover">
+									<h4 class="chart-title">Customized Pie</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/pie-custom.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#pie-doughnut">
+								<div class="chart-hover">
+									<h4 class="chart-title">pie-doughnut</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/pie-doughnut.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#pie-nest">
+								<div class="chart-hover">
+									<h4 class="chart-title">pie-nest</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/pie-nest.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#pie-roseType">
+								<div class="chart-hover">
+									<h4 class="chart-title">南丁格尔玫瑰图</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/pie-roseType.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#pie-simple">
+								<div class="chart-hover">
+									<h4 class="chart-title">某站点用户访问来源</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/pie-simple.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+				</div>
+				<h3 class="chart-type-head" id="chart-type-radar">雷达图</h3>
+				<div class="row" id="chart-row-radar">
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#radar-aqi">
+								<div class="chart-hover">
+									<h4 class="chart-title">AQI - 雷达图</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/radar-aqi.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#radar-custom">
+								<div class="chart-hover">
+									<h4 class="chart-title">自定义雷达图</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/radar-custom.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#radar-multiple">
+								<div class="chart-hover">
+									<h4 class="chart-title">多雷达图</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/radar-multiple.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#radar">
+								<div class="chart-hover">
+									<h4 class="chart-title">基础雷达图</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/radar.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#radar2">
+								<div class="chart-hover">
+									<h4 class="chart-title">浏览器占比变化</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/radar2.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+				</div>
+				<h3 class="chart-type-head" id="chart-type-candlestick">k线图</h3>
+				<div class="row" id="chart-row-candlestick">
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#candlestick-sh">
+								<div class="chart-hover">
+									<h4 class="chart-title">上证指数</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/candlestick-sh.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+				</div>
+				<h3 class="chart-type-head" id="chart-type-boxplot">箱线图</h3>
+				<div class="row" id="chart-row-boxplot">
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#boxplot-light-velocity">
+								<div class="chart-hover">
+									<h4 class="chart-title">boxplot-light-velocity</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/boxplot-light-velocity.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#boxplot-light-velocity2">
+								<div class="chart-hover">
+									<h4 class="chart-title">boxplot-light-velocity2</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/boxplot-light-velocity2.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#boxplot-multi">
+								<div class="chart-hover">
+									<h4 class="chart-title">Multiple Categories</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/boxplot-multi.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+				</div>
+				<h3 class="chart-type-head" id="chart-type-heatmap">热力图</h3>
+				<div class="row" id="chart-row-heatmap">
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#heatmap-cartesian">
+								<div class="chart-hover">
+									<h4 class="chart-title">heatmap-cartesian</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/heatmap-cartesian.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#heatmap-map">
+								<div class="chart-hover">
+									<h4 class="chart-title">全国主要城市空气质量</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/heatmap-map.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+				</div>
+				<h3 class="chart-type-head" id="chart-type-graph">关系图</h3>
+				<div class="row" id="chart-row-graph">
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#graph-circular-layout">
+								<div class="chart-hover">
+									<h4 class="chart-title">Les Miserables</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/graph-circular-layout.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#graph-force">
+								<div class="chart-hover">
+									<h4 class="chart-title">Les Miserables</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/graph-force.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#graph-force2">
+								<div class="chart-hover">
+									<h4 class="chart-title">graph-force2</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/graph-force2.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#graph-webkit-dep">
+								<div class="chart-hover">
+									<h4 class="chart-title">graph-webkit-dep</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/graph-webkit-dep.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#graph">
+								<div class="chart-hover">
+									<h4 class="chart-title">Les Miserables</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/graph.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+				</div>
+				<h3 class="chart-type-head" id="chart-type-treemap">矩形树图</h3>
+				<div class="row" id="chart-row-treemap">
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#treemap-disk">
+								<div class="chart-hover">
+									<h4 class="chart-title">Disk Usage</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/treemap-disk.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#treemap-obama">
+								<div class="chart-hover">
+									<h4 class="chart-title">How $3.7 Trillion is Spent</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/treemap-obama.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+				</div>
+				<h3 class="chart-type-head" id="chart-type-parallel">平行坐标</h3>
+				<div class="row" id="chart-row-parallel">
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#parallel-aqi">
+								<div class="chart-hover">
+									<h4 class="chart-title">parallel-aqi</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/parallel-aqi.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+				</div>
+				<h3 class="chart-type-head" id="chart-type-sankey">桑基图</h3>
+				<div class="row" id="chart-row-sankey">
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#sankey-energy">
+								<div class="chart-hover">
+									<h4 class="chart-title">Sankey Diagram</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/sankey-energy.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#sankey-product">
+								<div class="chart-hover">
+									<h4 class="chart-title">Sankey Diagram</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/sankey-product.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+				</div>
+				<h3 class="chart-type-head" id="chart-type-funnel">漏斗图</h3>
+				<div class="row" id="chart-row-funnel">
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#funnel-align">
+								<div class="chart-hover">
+									<h4 class="chart-title">漏斗图(对比)</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/funnel-align.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#funnel-customize">
+								<div class="chart-hover">
+									<h4 class="chart-title">漏斗图</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/funnel-customize.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#funnel-mutiple">
+								<div class="chart-hover">
+									<h4 class="chart-title">漏斗图</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/funnel-mutiple.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#funnel">
+								<div class="chart-hover">
+									<h4 class="chart-title">漏斗图</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/funnel.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+				</div>
+				<h3 class="chart-type-head" id="chart-type-gauge">仪表盘</h3>
+				<div class="row" id="chart-row-gauge">
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#gauge-car">
+								<div class="chart-hover">
+									<h4 class="chart-title">gauge-car</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/gauge-car.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="chart">
+							<a class="chart-link" href="http://echarts.baidu.com/demo.html#gauge">
+								<div class="chart-hover">
+									<h4 class="chart-title">gauge</h4>
+									<div class="chart-subtitle">点击查看详情</div>
+								</div>
+								<div class="chart-hover-bg"></div>
+								<img class="chart-area" data-original="http://echarts.baidu.com/gallery/data/thumb/gauge.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="display:none">点击查看详情</div>
+	</div>
+	<script type="text/javascript" src="./ECharts Examples_files/jquery.min.js"></script>
+	<script type="text/javascript" src="./ECharts Examples_files/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./ECharts Examples_files/validator.js"></script>
+	<script type="text/javascript" src="./ECharts Examples_files/waypoint.js"></script>
+	<script type="text/javascript" src="./ECharts Examples_files/perfect-scrollbar.min.js"></script>
+	<script type="text/javascript" src="./ECharts Examples_files/jquery.lazyload.min.js"></script>
+	<script type="text/javascript">var GALLERY_PATH = 'http://echarts.baidu.com/gallery/';
+console.log(GALLERY_PATH);
+var GALLERY_EDITOR_PATH = GALLERY_PATH + 'editor.html?c=';
+var GALLERY_VIEW_PATH = GALLERY_PATH + 'view.html?c=';
+var GALLERY_THUMB_PATH = GALLERY_PATH + 'data/thumb/';
+</script>
+	<script type="text/javascript" src="./ECharts Examples_files/config.js"></script>
+	<script type="text/javascript" src="./ECharts Examples_files/chart-list.js"></script>
+	<script type="text/javascript" src="./ECharts Examples_files/examples-nav.js"></script>
+	<script type="text/javascript">document.getElementById('nav-examples').className = 'active';</script>
+	<script type="text/javascript" src="./ECharts Examples_files/hm(1).js"></script>
+	<div id="gj_NavDiv" style="position: fixed; z-index: 2147483640; right: 0px; width: 0px; height: 0px; bottom: 59px; display: block;">
+		<iframe src="./ECharts Examples_files/adcpage.html" id="gj_SafeDaohang" frameborder="0" scrolling="0" width="100%" height="100%" noresize="noresize" style="position: fixed; z-index: 2147483640; right: 0px; width: 0px; height: 0px; bottom: 99px; border: 0px none;"></iframe>
+	</div>
+	<div id="gj_mini" style="right: 10px; bottom: 50px; display: block; position: fixed; z-index: 2147483641; background-image: url(&quot;http://s.pc.qq.com/navigate/adc/v2/hover-ok.png&quot;); background-position: 0px 0px;"></div>
+	<div id="gj_shard" style="right: -70px; bottom: -20px; position: fixed; z-index: 2147483643; display: none;"></div>
+	<div id="gj_circle" style="right: 10px; bottom: 50px; position: fixed; z-index: 2147483642;"></div>
+	<div id="gj_bar_left" style="right: 60px; bottom: 58px; position: fixed; z-index: 2147483640; width: 0px;">
+		<div id="tipstext" style="white-space:nowrap;font-size: 14px;font-weight: bold;overflow:hidden;">0个广告已降服</div>
+		<div id="tipstext" style="color:#CFDFFE;overflow:hidden;padding-top:0px;white-space: nowrap;">可以清爽的上网了~</div>
+	</div>
+</body>
+</html>
